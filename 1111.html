@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Person(name, birth, height, weight){
+        this.name = name;
+        this.birth = birth;
+        this.height = height;
+        this.weight = weight;
+        var BMI = weight/((height*height)/10000);
+        this.BMI = BMI;
+        var thisYear = 2019;
+        var age = thisYear - parseInt(this.birth) + 1;
+        this.age =age;
+
+        this.getBMI = function (){
+
+            return BMI;
+        }
+
+        this.getAge = function(){
+            return this.age;
+        }
+
+        this.show = function(){
+            document.write("name : ", this.name,"<br>")
+            document.write("age : ", this.age,"<br>")
+            document.write("height : ", this.height,"<br>")
+            document.write("weight : ", this.weight,"<br>")
+            document.write("BMI : ", this.BMI,"<br>")
+
+        }
+    }
+    var Me = new Person("박주영", 2000, 185, 80);
+
+    Me.show()
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var height, weight, BMI, StrBMI
+        const heightMin = 50, heightMax = 300, weightMax = 700, weightMin = 10
+        while(true){
+            height = Number(prompt("키(cm)? "))
+            if(height == 0){
+                alert("종료합니다.")
+                break;
+            }
+            if((height<heightMin || height>heightMax)){
+                alert("키의 입력범위는 50cm~300cm입니다.")
+                continue;}
+
+            weight = Number(prompt("몸무게(kg)? "))
+            if(weight == 0){
+                alert("종료합니다.")
+                break;
+            }
+            if((weight<weightMin || weight>weightMax)){
+                alert("몸무게 입력범위는 10kg~700kg입니다.")
+                continue;}
+            
+            BMI = weight / ((height/100) * (height/100));
+            
+            if(BMI<=18.5){
+                StrBMI = ("과체중")
+            }
+            else if(BMI<=22.9){
+                StrBMI = ("정상체중")
+            }
+            else if(BMI<=24.9){
+                StrBMI = ("과체중")
+            }
+            else if(BMI<=29.9){
+                StrBMI = ("비만1")
+            }
+            else if(BMI<=39.9){
+                StrBMI = ("비만2")
+            }
+            else{
+                StrBMI = ("심각한 비만3")}
+        document.write("키 : ", Number(height/100), "m, 몸무게 : ", weight, "kg, BMI : ", BMI, "=> ", StrBMI);
+        
+        }
+        
+        
+
+
+    
+    </script>
+</body>
+</html>

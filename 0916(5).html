@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title> javascript type convert </title>
+</head>
+
+<body>
+    <script>
+        var int = 100,
+            float = 35.6,
+            str = "홍길동",
+            bool = true;
+        document.write("int=" + int + '<br>');
+        document.write("float=" + float + '<br>');
+        document.write("String(int)=" + String(int) + '<br>');
+        document.write("int + float=" + (int + float) + '<br>');
+        document.write("String(int) + String(float)=" + (String(int) + String(float)) + '<br>');
+        document.write("str=" + str + '<br>');
+        document.write("Number(str)=" + Number(str) + '<br>');
+        document.write("bool=" + bool + '<br>');
+        document.write("Number(bool)=" + Number(bool) + '<br>');
+        document.write("float=" + float + '<br>');
+        document.write("Boolean(float)=" + Boolean(float) + '<br>');
+        document.write("Boolean(null)=" + Boolean(null) + '<br>');
+        var intstr = String(int);
+        var strint = Number(intstr);
+        document.write("intstr=" + intstr + '<br>');
+        document.write("strint=" + strint + '<br>');
+    </script>
+</body>
+
+</html>

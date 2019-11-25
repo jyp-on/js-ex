@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title> javascript Method </title>
+</head>
+
+<body>
+    <h1>javascript Method Example</h1>
+    <h1>입력정보</h1>
+    <p id = "name"></p>
+    <p id = "birth"></p>
+    <p id = "jender"></p>
+    <script>
+var name = prompt("성명 : ",name);
+var strname = "성명 = " + name;
+var birth = prompt("생년월일 입력 : ", birth);
+var strbirth = "생년월일 : " + birth;
+var jender;
+if(confirm("성별이 '여'이면 확인 '남'이면 취소를 누르세요.")){
+    alert("여성입니다..");
+    jender = "성별은 여성입니다.";
+    
+}else{
+    alert("남성입니다.");
+    jender = "성별은 남성입니다.";
+}
+
+document.getElementById('name').innerHTML = strname;
+document.getElementById('jender').innerHTML = jender;
+document.getElementById('birth').innerHTML = strbirth;
+
+document.write("입력결과 = 성명 :"+name+"  성별 : "+jender +"  생년월일 : " +birth)
+
+    </script>
+</body>
+
+</html>

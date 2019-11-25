@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        .reference {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        width: 80%;
+        }
+        .reference th {
+        background: none repeat scroll 0 0 #EEEEEE;
+        }
+        .reference td, .reference th {
+        border: 1px solid gray;
+        padding: 5px;
+        }
+        </style>
+      <table class="reference">
+      <script type="text/javascript">
+        var str = 'coding everybody'; 
+      document.write('<tr>');
+        document.write('<th>인자</th>');
+        document.write('<th>slice</th>');
+        document.write('<th>substr</th>');
+        document.write('<th>substring</th>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(7)</td>');
+        document.write('<td>'+str.slice(7)+'</td>');
+        document.write('<td>'+str.substr(7)+'</td>');
+        document.write('<td>'+str.substring(7)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(0,7)</td>');
+        document.write('<td>'+str.slice(0,7)+'</td>');
+        document.write('<td>'+str.substr(0,7)+'</td>');
+        document.write('<td>'+str.substring(0,7)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(3,7)</td>');
+        document.write('<td>'+str.slice(3,7)+'</td>');
+        document.write('<td>'+str.substr(3,7)+'</td>');
+        document.write('<td>'+str.substring(3,7)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(7,2)</td>');
+        document.write('<td>'+str.slice(7,2)+'</td>');
+        document.write('<td>'+str.substr(7,2)+'</td>');
+        document.write('<td>'+str.substring(7,2)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(-7)</td>');
+        document.write('<td>'+str.slice(-7)+'</td>');
+        document.write('<td>'+str.substr(-7)+'</td>');
+        document.write('<td>'+str.substring(-7)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(-7,2)</td>');
+        document.write('<td>'+str.slice(-7, 2)+'</td>');
+        document.write('<td>'+str.substr(-7, 2)+'</td>');
+        document.write('<td>'+str.substring(-7, 2)+'</td>');
+      document.write('</tr>');
+       
+      document.write('<tr>');
+        document.write('<td>function(7,7)</td>');
+        document.write('<td>'+str.slice(7, 7)+'</td>');
+        document.write('<td>'+str.substr(7, 7)+'</td>');
+        document.write('<td>'+str.substring(7, 7)+'</td>');
+      document.write('</tr>');
+       
+      </script>
+        </table>
+
+</body>
+
+</html>

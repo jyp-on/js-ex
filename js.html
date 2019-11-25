@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <script>
+        var exam = function () {
+
+            var num = prompt('수식을 입력하세요');
+
+            var result = 0;
+
+            var arr = num.split(' ');;
+
+            var temp = 0;
+
+            for (let i = 0; i < num.length - 2; i++) {
+                
+                var countarr = 1;
+                var countNum = 0;
+                switch (arr[countarr]) {
+
+                    case '+':
+                        result += Number(arr[countNum]) + Number(arr[countNum+2]);
+
+                        break;
+
+                    case '*':
+                        result +=  Number(arr[countNum]) * Number(arr[countNum+2]);
+
+
+                        break;
+
+                    case '/':
+                        result =  Number(arr[i]) / Number(arr[i + 2]);
+
+
+                        break;
+
+                    case '%':
+                        result =  Number(arr[i]) % Number(arr[i + 2]);
+
+
+                        break;
+
+                    default:
+                        result = 0;
+
+                        break;
+
+                }
+                
+                result += result;
+                
+                countarr += 2;
+                countNum += 2;
+
+                if(countNum == num.length-1)
+                break;
+                
+                result = 0;
+            }
+            document.write(temp);
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+        exam();
+    </script>
+
+</body>
+
+</html>

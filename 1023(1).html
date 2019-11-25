@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hi(nnn){
+            alert("안녕 "+nnn);
+        }
+
+
+        //콜백함수
+        function hiInput(callB){
+            var name = prompt("이름을 입력해주세요 : ");
+            callB(name);
+        }
+
+        hiInput(hi);
+    </script>
+</body>
+
+</html>

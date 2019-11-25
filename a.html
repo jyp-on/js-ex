@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+
+<body>
+    <input type="button" value="현재 날짜 출력" onclick="toDay()" >
+    <input type="button" value="n 일 후의 날짜 출력" onclick="fuDay()" >
+    <script>
+        var toDay = function () {
+            var date = new Date();
+            var result;
+            with(date) {
+                result += `${getFullYear()}년\n`;
+                result += `${getMonth()+1}월\n`;
+                result += `${getDate()}일\n`;
+                result += `${day(getDay())}\n`;
+                result += `${hour(getHours())}시\n`;
+                result += `${getMinutes()}분`;
+            }
+            alert(`현재 날짜는 다음과 같습니다\n ${result}`);
+        }
+
+        let day = function (num) {
+            let answer = new Array("일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일");
+            return answer[num];
+        }
+
+        let hour = function (num) {
+            if (num > 12) {
+                return `오후 ${(Number(num)-12)}시`;
+            } else {
+                return `오전 ${num}시`;
+            }
+        }
+
+        let fuDay = function () {
+                let after = prompt("며칠 후 입니까?");
+                let date = new Date();
+                let date_2;
+                with(date) {
+                    date_2 = new Date(getFullYear(), getMonth(), getDate() + Number(after));
+                }
+                alert(`${after}후의 날짜는 \n${date_2.getFullYear()}년 ${date_2.getMonth()+1}월 ${date_2.getDate()}일);
+      }
+    </script>
+</body>
+
+</html>

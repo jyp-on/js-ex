@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var com = [95, 88, , 72, 68, , 99, 82, 78, 87]; // 10명 중 8명의 점수만 입력
+        var getAvg;
+
+        
+
+        function PrintArr() {
+            var i;
+            document.write("전체출력<br>")
+            for (i = 0; i < com.length; i++) {
+                    document.write("com[",i,"]",com[i],"<br>")
+            }
+            document.write("<br>")
+        }
+
+        function OddPrintArr() {
+            var i;
+            document.write("홀수출력 <br>")
+            
+            
+            for (i = 0; i < com.length; i++) {
+                if(i%2!=0)
+                    document.write("com[",i,"]",com[i],"<br>")
+            }
+            document.write("<br>")
+        }
+
+        function Count80() {
+            var i;
+            var count = 0;
+            
+            
+            for (i = 0; i < com.length; i++) {
+                if(com[i]>80)
+                    count++;
+            }
+            document.write("<br>")
+            return count;
+        }
+
+        function Count80() {
+            var i;
+            var count = 0;
+            
+            
+            for (i = 0; i < com.length; i++) {
+                if(com[i]>80)
+                    count++;
+            }
+            document.write("<br>")
+            return count;
+        }
+
+        function setud(){
+            var i;
+            document.write("<br>매개변수가 있으면 그걸 undefined에 넣고 없으면 0을 넣음.")
+
+
+            if(arguments.length!=0){ 
+            for (i = 0; i < com.length; i++) {
+                if(com[i]==undefined)
+                    com[i] = arguments[0];
+            }
+            }
+
+            if(arguments.length==0){
+            for (i = 0; i < com.length; i++) { 
+                if(com[i]==undefined)
+                    com[i] = 0;
+                }
+            }
+            
+            document.write("<br>")
+            
+            for (i = 0; i < com.length; i++) {
+                    document.write("com[",i,"]",com[i],"<br>")
+            }
+            document.write("<br>")
+        }
+
+        
+
+
+
+
+        PrintArr();
+        
+        OddPrintArr();
+
+        document.write("80넘는 학생수 : ",Count80())
+
+        setud(5);
+        
+
+        
+    </script>
+
+</body>
+
+</html>

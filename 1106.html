@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Car = {
+            name: "람머스",
+            speed: 0,
+            color: "red",
+            Max: 30,
+            Min: 0,
+
+
+            start: function () {
+                this.speed++;
+                if (this.speed > this.Max) {
+                    document.write("최고속도를 초과하였습니다. 30으로 유지합니다. <br>")
+                    this.speed = 30;
+                }
+                return this.speed;
+            },
+
+            speedUp: function () {
+                this.speed = this.speed + 10;
+                if (this.speed > this.Max) {
+                    document.write("최고속도를 초과하였습니다. 30으로 유지합니다. <br>")
+                    this.speed = 30;
+                }
+
+                return this.speed;
+            },
+
+            speeddown: function () {
+                this.speed = this.speed - 10;
+                if (this.speed < this.Min) {
+                    document.write("최저속도인 0이 안됩니다. 0으로 유지합니다. <br>")
+                    this.speed = 0;
+                }
+                return this.speed;
+            },
+
+            break: function () {
+                this.speed = 0;
+
+                return this.speed;
+
+            },
+
+            show: function () {
+                document.write("name : ", this.name, "<br>")
+                document.write("speed : ", this.speed, "<br>")
+                document.write("color : ", this.color, "<br>")
+                
+            }
+        }
+
+        document.write("현재속도 ", Car.speed, "<br>")
+
+        document.write("출발했을때 속도 ", Car.start(), "<br>")
+
+        document.write("스피드 업 ", Car.speedUp(), "<br>")
+        document.write("스피드 업 ", Car.speedUp(), "<br>")
+        document.write("스피드 업 ", Car.speedUp(), "<br>")
+        document.write("스피드 업 ", Car.speedUp(), "<br>")
+
+        document.write("스피드 다운", Car.speeddown(), "<br>")
+        document.write("스피드 다운", Car.speeddown(), "<br>")
+        document.write("스피드 다운", Car.speeddown(), "<br>")
+        document.write("스피드 다운", Car.speeddown(), "<br>")
+
+        document.write("브레이크 하고나서 속도 ", Car.break(), "<br>");
+        document.write("속성 값 출력 <br>")
+        Car.show()
+
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var score = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        var avg;
+        var sum = 0;
+        var Deviation = 0; //편차
+        var v;      //분산
+        var StdDevistion; //표준편차
+
+        var v1=0; //분산 구하는과정
+        var v2; //분산 구하는과정
+
+        var Max = 0;
+        var Min = 100;
+
+        var fdata;
+        
+        function avg(value){ //평균 함수
+            sum += value;
+            avg = sum/(score.length)
+            return avg;
+        }
+        score.forEach(avg) //forEach 실행
+        document.write("avg = ",avg)
+
+        function Std(value){ //표준편차 함수
+            Deviation = value - avg; //편차
+
+            v1 += Math.pow(Deviation, 2)
+
+            v2 = v1/score.length 
+            
+            StdDevistion = Math.sqrt(v2)
+            return StdDevistion
+
+        }
+        score.forEach(Std)
+        document.write("<br>Std = ",StdDevistion )
+
+        function MaxP(value){
+            if(value>Max)
+                Max = value
+            return Max
+        }
+
+        score.forEach(MaxP)
+        document.write("<br>Max : ",Max)
+
+        function MinP(value){
+            if(value<Min)
+                Min = value
+            return Min
+        }
+
+        score.forEach(MinP)
+        document.write("<br>Min : ",Min)
+
+        function filterEight(value){
+            return value>=80
+        }
+
+        fdata = score.filter(filterEight)
+        document.write("<br>Eight Over : ", fdata)
+
+        var TwoArr = [[],[],[],[],[]]
+        var A = 1;
+        function AddArr(){
+            for(var i = 0; i<5; i++){
+            for(var t = 0; t<5; t++){
+            TwoArr[i][t] = A++;
+            }
+          }
+        }
+        AddArr()
+        document.write("<br>",TwoArr)
+
+        var RowSum = 0;
+        
+        var ColumnSum = 0;
+        
+        var cross = 0;
+        for(var i = 0; i<5; i++){
+            for(var t = 0; t<5; t++){
+            RowSum += TwoArr[i][t];
+        }
+        document.write("<br> 행의합 ",i,"행의 합 : ",RowSum);
+        RowSum = 0;
+        }
+
+        for(var i = 0; i<5; i++){
+            for(var t = 0; t<5; t++){
+            ColumnSum += TwoArr[t][i];
+        }
+        document.write("<br> 열의합 ",i,"열의 합 : ",ColumnSum);
+        ColumnSum = 0;
+        }
+
+        for(var i = 0; i<TwoArr[0].length; i++){
+            cross += TwoArr[i][i];
+        }
+
+        document.write("<br> 대각선의 합 : ",cross);
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

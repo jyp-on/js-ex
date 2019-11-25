@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        var rarr = [];
+        function insertArr() {
+            var i = 0;
+            for(i = 0; i<=9; i++){
+                arr[i] = 2*(i+1)
+            }
+            document.write(arr)
+        }
+
+        function join(){
+            var joinarr=arr.join(" : ")
+            document.write(joinarr)
+        }
+
+        function concat(){
+            var arr5 = []
+            for(var j = 0; j<5; j++){
+                arr5[j] = 100+(j+1)*10
+            }
+            var concatArr = arr.concat(arr5)
+            document.write(concatArr)
+        }
+
+        function sort(){
+            rarr = arr.reverse();
+            document.write(rarr)
+        }
+
+        function slice(){
+            var arr = rarr.reverse();
+            var slicearr = arr.slice([2], [-3])
+            document.write(slicearr)
+        }
+
+        function splice() {  
+            var splicearr = arr.splice(1, 3, "-1", "-2")
+            document.write(arr)
+        }
+        insertArr();
+        document.write("<br>")
+        join();
+        document.write("<br>")
+        concat();
+        document.write("<br>")
+        sort();
+        document.write("<br>")
+        slice();
+        document.write("<br>")
+        splice();
+        
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

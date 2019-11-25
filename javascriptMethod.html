@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title> javascript Method </title>
+</head>
+
+<body>
+    <h1>JavaScript Mathod</h1>
+    <p id="demo"></p> // 나이 출력 
+    <script>
+        document.title = "new title";
+        var age = 0;
+        age = prompt("나이를 입력 ?", age); //age값을 받고 밑에서 출력
+        var str = "당신의 나이는 = " + age;
+        document.getElementById('demo').innerHTML = str;
+        alert(str)
+        if (confirm("학생이면 확인 ?")) {
+            document.write("학생입니다.")
+        } else {
+            document.write("학생이 아닙니다.")
+        }
+    </script>
+</body>
+
+</html>

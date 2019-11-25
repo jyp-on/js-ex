@@ -1,0 +1,27 @@
+<html>
+<html>
+
+<head>
+    <script>
+        function add() {
+            var name = document.createElement('div');
+            var textNode = document.createTextNode(prompt('이름을 입력하세요'));
+            name.id = 'nn';
+            name.appendChild(textNode);
+            document.body.appendChild(name);
+        };
+
+        function change() {
+            var search = document.getElementById('nn');
+            search.style.color = 'blue';
+            search.style.fontSize = '40px';
+        };
+    </script>
+</head>
+
+<body>
+    <a href="#" onclick="add()">[이름 추가]</a>
+    <input type="button" onclick="change()" value="change1">
+</body>
+
+</html>

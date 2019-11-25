@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> 자바스크립트 비트 연산 </h3>
+    <script>
+        var a = 30,
+            b = -5
+        h1 = a & b;
+        h2 = a | b;
+        h3 = ~b;
+        h4 = a>>3;
+        h5 = b<<4;
+        document.write("a & b = "+h1.toString(10)+"<br>");
+        document.write("a & b = "+h1.toString(2)+"<br>");
+        document.write("a & b = "+h1.toString(16)+"<br>");
+
+        document.write("a | b = "+h2.toString(10)+"<br>");
+        document.write("a | b = "+h2.toString(2)+"<br>");
+        document.write("a | b = "+h2.toString(16)+"<br>");
+
+        document.write("~b = "+h3.toString(10)+"<br>");
+        document.write("~b = "+h3.toString(2)+"<br>");
+        document.write("~b = "+h3.toString(16)+"<br>");
+
+        document.write("a >> 3 = "+h4.toString(10)+"<br>");
+        document.write("a >> 3 = "+h4.toString(2)+"<br>");
+        document.write("a >> 3 = "+h4.toString(16)+"<br>");
+
+        document.write("b << 4 = "+h5.toString(10)+"<br>");
+        document.write("b << 4 = "+h5.toString(2)+"<br>");
+        document.write("b << 4 = "+h5.toString(16)+"<br>");
+    </script>
+
+</body>
+
+</html>

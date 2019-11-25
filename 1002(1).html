@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var year = prompt("생년");
+
+        if (year < 1900 || year > 2018) {
+            document.write("생년오류")
+            exit();
+        }
+        document.write("생년 : ", year, "<br>")
+
+        var month = prompt("생월");
+        if (month < 1 || month > 12) {
+            document.write("생월오류")
+            exit();
+        }
+        document.write("생월 : ", month, "<br>")
+
+        if (((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) || 2 == month) {
+            var yun = month;
+        }
+
+
+        
+
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 ||month == 12) {
+            day = prompt("31일까지 입력하세요")
+        } else if (month == 4 || month == 6 || month == 9 ||month == 11){
+            day = prompt("30일까지 입력하세요")
+        }
+
+          else if (month == 2) {
+            if (yun == month) {
+                day = prompt("29일까지 입력하세요")
+            } else {
+                day = prompt("28일까지 입력하세요")
+            }
+        } 
+              else {
+                document.write("알맞은 숫자를 넣어주세요")
+        }
+
+        
+
+
+
+
+
+        document.write("생일 : ", day, "<br>")
+
+        var birthDay = new Date(year, month - 1, day);
+        document.write(birthDay + "<br>")
+        birthDay.getDay()
+        switch (birthDay.getDay()) {
+            case 0:
+                document.write("일요일 입니다.")
+                break;
+            case 1:
+                document.write("월요일 입니다.")
+                break;
+            case 2:
+                document.write("화요일 입니다.")
+                break;
+            case 3:
+                document.write("수요일 입니다.")
+                break;
+            case 4:
+                document.write("목요일 입니다.")
+                break;
+            case 5:
+                document.write("금요일 입니다.")
+                break;
+            case 6:
+                document.write("토요일 입니다.")
+                break;
+        }
+    </script>
+
+</body>
+
+</html>

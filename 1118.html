@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<script>
+    function add1() {
+        var header = document.createElement('h3'); // 요소 노드 생성
+        var textNode = document.createTextNode('내 이름은 홍길동입니다.'); // 텍스트 노드 생성
+        header.appendChild(textNode); // 요소 노드와 텍스트 노드 연결
+        document.body.appendChild(header); // 생성한 문서 객체를 body에 추가
+    };
+
+    function add2() {
+        var img = document.createElement('img');
+        img.src = 'back.png';
+        img.width = 100;
+        img.height = 122;
+        document.body.appendChild(img);
+    };
+</script>
+
+
+
+    
+
+
+<body>
+    <a href="#" onclick="add1()">당신의 이름은 무엇입니까?</a>
+    <a href="#" onclick="add2()">[이미지 추가]</a>
+    
+</body>
+
+</html>
